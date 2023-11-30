@@ -49,8 +49,8 @@ public class UserRegistrationTestJunit {
 	    /*given_Password_valid method is testing a password*/
 	    @Test
 	    public void given_Password_is_valid(){
-	        boolean isValid = userRegistration.validatePassword("asdfghjl");
-	        boolean isNotValid = userRegistration.validatePassword("asdfgt");
+	        boolean isValid = userRegistration.validatePassword("Asdfghjl");
+	        boolean isNotValid = userRegistration.validatePassword("asdfgthj");
 	        Assert Assertions = null;
 	        Assertions.assertTrue(isValid);
 	        Assertions.assertFalse(isNotValid);
