@@ -46,5 +46,16 @@ public class UserRegistrationJunit {
         }
         return isValid;
         }
+	
+	public boolean validatePassword(String Password) {
+        boolean isValid = Password.matches("[a-z\\\\d]{8,}$");
+        if (isValid) {
+            System.out.println("Password is valid");
+            
+        } else {
+            System.out.println("Password is not valid ");
+        }
+        return isValid;
+        }
 
 }
