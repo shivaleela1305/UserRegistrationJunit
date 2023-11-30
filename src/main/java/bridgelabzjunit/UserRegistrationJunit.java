@@ -35,5 +35,16 @@ public class UserRegistrationJunit {
         }
         return isValid;
         }
+	
+	public boolean validatePhone_Num(String Phone_num) {
+        boolean isValid = Phone_num.matches("\\+[0-9]{1,3}[0-9]{10}$");
+        if (isValid) {
+            System.out.println("Phone num is valid");
+            
+        } else {
+            System.out.println("Phone num is not valid ");
+        }
+        return isValid;
+        }
 
 }
