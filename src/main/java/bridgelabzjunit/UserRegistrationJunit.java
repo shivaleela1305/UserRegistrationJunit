@@ -23,8 +23,17 @@ public class UserRegistrationJunit {
             System.out.println("Last name is not valid ");
         }
         return isValid;
-        
-       
-    }
+        }
+	
+	public boolean validateEmail_id(String Email_id) {
+        boolean isValid = Email_id.matches("[A-Za-z0-9+_.-]+@gmail\\.com$");
+        if (isValid) {
+            System.out.println("Email is valid");
+            
+        } else {
+            System.out.println("Email is not valid ");
+        }
+        return isValid;
+        }
 
 }
