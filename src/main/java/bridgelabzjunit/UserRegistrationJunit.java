@@ -48,7 +48,7 @@ public class UserRegistrationJunit {
         }
 	
 	public boolean validatePassword(String Password) {
-        boolean isValid = Password.matches("(?=.*[A-Z])(?=.*[a-z\\\\d])[A-Za-z\\\\d]{8,}$");
+        boolean isValid = Password.matches("(?=.*[A-Z])(?=.*[a-z\\d])(?=.*\\d)[A-Za-z\\d]{8,}$");
         if (isValid) {
             System.out.println("Password is valid");
             
@@ -57,5 +57,6 @@ public class UserRegistrationJunit {
         }
         return isValid;
         }
+	
 
 }
