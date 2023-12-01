@@ -3,8 +3,8 @@ package bridgelabzjunit;
 
 public class UserRegistrationJunit {
 
-	public boolean validatefirstName(String FirstName) {
-        boolean isValid = FirstName.matches("[A-Z][a-z]{3,10}");
+	public boolean validateFirstName(String firstName) {
+        boolean isValid = firstName.matches("[A-Z][a-z]{3,10}");
         if (isValid) {
             System.out.println("First name is valid");
             
@@ -14,8 +14,8 @@ public class UserRegistrationJunit {
         return isValid;
         }
 	
-	public boolean validatelastName(String LastName) {
-        boolean isValid = LastName.matches("[A-Z][a-z]{3,10}");
+	public boolean validateLastName(String lastName) {
+        boolean isValid = lastName.matches("[A-Z][a-z]{3,10}");
         if (isValid) {
             System.out.println("Last name is valid");
             
@@ -25,8 +25,8 @@ public class UserRegistrationJunit {
         return isValid;
         }
 	
-	public boolean validateEmail_id(String Email_id) {
-        boolean isValid = Email_id.matches("[A-Za-z0-9+_.-]+@gmail\\.com$");
+	public boolean validateEmail_id(String email_id) {
+        boolean isValid = email_id.matches("[A-Za-z0-9+_.-]+@gmail\\.com$");
         if (isValid) {
             System.out.println("Email is valid");
             
@@ -36,8 +36,8 @@ public class UserRegistrationJunit {
         return isValid;
         }
 	
-	public boolean validatePhone_Num(String Phone_num) {
-        boolean isValid = Phone_num.matches("\\+[0-9]{1,3}[0-9]{10}$");
+	public boolean validatePhone_Number(String phone_num) {
+        boolean isValid = phone_num.matches("\\+[0-9]{1,3}[0-9]{10}$");
         if (isValid) {
             System.out.println("Phone num is valid");
             
@@ -47,8 +47,8 @@ public class UserRegistrationJunit {
         return isValid;
         }
 	
-	public boolean validatePassword(String Password) {
-        boolean isValid = Password.matches("(?=.*[A-Z])(?=.*[a-z\\d])(?=.*\\d)[A-Za-z\\d]{8,}$");
+	public boolean validatePassword(String password) {
+        boolean isValid = password.matches("(?=.*[A-Z])(?=.*[a-z\\d])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$");
         if (isValid) {
             System.out.println("Password is valid");
             
