@@ -29,8 +29,10 @@ class Firstname implements UserRegistrationJunit {
 class Lastname implements UserRegistrationJunit {
 	@Override
 	public boolean validate(String lastName) {
-		boolean isValid = lastName.matches("[A-Z][a-z]{3,}");
-		if (isValid) {
+		Pattern pattern = Pattern.compile("[A-Z][a-z]{3,}");
+		Matcher matcher = pattern.matcher(lastName);
+		boolean result = matcher.matches();
+		if (result) {
 			return true;
 		} else {
 			return false;
@@ -43,8 +45,10 @@ class Lastname implements UserRegistrationJunit {
 class Email_id implements UserRegistrationJunit {
 	@Override
 	public boolean validate(String email_id) {
-		boolean isValid = email_id.matches("^[A-Za-z0-9+_.-]+@gmail\\.com$");
-		if (isValid) {
+		Pattern pattern = Pattern.compile("^[A-Za-z0-9+_.-]+@gmail\\.com$");
+		Matcher matcher = pattern.matcher(email_id);
+		boolean result = matcher.matches();
+		if (result) {
 			return true;
 
 		} else {
@@ -58,8 +62,10 @@ class Email_id implements UserRegistrationJunit {
 class Phone_num implements UserRegistrationJunit {
 	@Override
 	public boolean validate(String phone_num) {
-		boolean isValid = phone_num.matches("\\+[0-9]{1,3}[0-9]{10}$");
-		if (isValid) {
+		Pattern pattern = Pattern.compile("\\+[0-9]{1,3}[0-9]{10}$");
+		Matcher matcher = pattern.matcher(phone_num);
+		boolean result = matcher.matches();
+		if (result) {
 			return true;
 
 		} else {
@@ -75,8 +81,10 @@ class Phone_num implements UserRegistrationJunit {
 class Password implements UserRegistrationJunit {
 	@Override
 	public boolean validate(String password) {
-		boolean isValid = password.matches("(?=.*[A-Z])(?=.*[a-z\\d])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$");
-		if (isValid) {
+		Pattern pattern = Pattern.compile("(?=.*[A-Z])(?=.*[a-z\\d])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$");
+		Matcher matcher = pattern.matcher(password);
+		boolean result = matcher.matches();
+		if (result) {
 			return true;
 
 		} else {

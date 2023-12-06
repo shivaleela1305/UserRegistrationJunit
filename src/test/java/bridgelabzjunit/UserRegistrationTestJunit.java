@@ -3,7 +3,16 @@ package bridgelabzjunit;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
 public class UserRegistrationTestJunit {
+	// UC10:validating all the user credentials by its respective term
 
 	/* given_first_name_valid method is testing a first name */
 	@Test
@@ -26,9 +35,12 @@ public class UserRegistrationTestJunit {
 	}
 
 	/* given_Email_Id_valid method is testing a email id */
-	@Test
-	public void given_Email_Id_is_valid() {
+	@ParameterizedTest
+	@ValueSource(strings = {"shiv@gmail.com", "rhu@gmail.com"})
+
+	void testMultipleEmail_id(String email) {
 		UserRegistrationJunit userRegistration = new Email_id();
+
 		boolean isValid = userRegistration.validate("shiv@gmail.com");
 		boolean isNotValid = userRegistration.validate("shivagmail");
 		assertTrue(isValid);
